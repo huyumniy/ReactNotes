@@ -1,0 +1,10 @@
+.header {
+  height: 3vh;
+  display: flex;
+  gap: 5px;
+}
+
+.header__icon {
+  height: 15px;
+  width: 15px;
+}

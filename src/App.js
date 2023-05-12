@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { DataProvider } from "./context/DataContext";
+
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import WorkSpace from "./components/WorkSpace";
+import SearchBox from "./components/SearchBox";
+import Modal from "./components/Modal";
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <DataProvider>
+        <div className="headerBox">
+          <Header />
+          <SearchBox/>
+        </div>
+        <div className="container">
+          <Sidebar/>
+          <WorkSpace />
+          <Modal />
+        </div>
+      </DataProvider>
     </div>
   );
 }
